@@ -125,6 +125,66 @@ header img{
     animation: 2.5s fadeInUp;
 }
 
+/* Section2 */
+
+.section2{
+    background: var(--background);
+}
+
+.section2 div{
+    max-width: var(--max-width);
+    margin: auto;
+}
+
+.section2 div h2{
+    font-size: 36px;
+    padding-bottom: 50px;
+    text-align: center;
+}
+
+.section2 img{
+    width: 798px;
+    margin-left: 10%;
+}
+
+.section2 div article{
+    width: 22%;
+    background: var(--orange);
+    position: absolute;
+    top: 22%;
+    left: 58%;
+    padding: 30px;
+}
+
+.section2 > div div{
+    position: relative;
+    padding-bottom: 100px;
+}
+
+.section2 > div article h3{
+    margin: 20px 0;
+}
+
+.section2 > div article p:nth-child(2){
+    margin-bottom: 20px;
+}
+
+.section2 article a{
+    background: var(--background);
+    border: 1px solid var(--white);
+    position: absolute;
+    left: 34%;
+    top: 96%;
+}
+
+.section2 #dwwm img{
+    margin-left: 30%;
+}
+
+#dwwm article{
+    left: 10%;
+}
+
 /* Footer */
 
 footer{
