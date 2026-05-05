@@ -1,0 +1,104 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Général */
+*{
+    margin: 0;
+    font-family: var(--font-text);
+}
+
+:root{
+    --font-text: "Open Sans", sans-serif;
+    --font-title: "Raleway", sans-serif;
+    --background: #011826;
+    --orange: #FF9A16;
+    --white: #F7FFF2;
+    --red: #E7174A;
+    --green-water: #2CC1AA;
+    --max-width: 1470px;
+    --ease-out: 0.3s ease-out;
+    --animation-fadeInUp: 1.5s fadeInUp;
+}
+
+a{
+    color: var(--white);
+    text-decoration: none;
+}
+
+@keyframes fadeInUp {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+/* Header */
+
+header{
+    background: var(--background);
+}
+
+header div{
+    max-width: var(--max-width);
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10px;
+}
+
+header nav ul{
+    display: flex;
+    list-style: none;
+    gap: 40px;
+    padding: 0;
+    animation: 1.5s fadeInUp;
+}
+
+header nav a{
+    color: var(--orange);
+    transition: var(--ease-out);
+}
+
+header nav a:hover{
+    color: var(--red);
+    transition: var(--ease-out);
+}
+
+header nav li:nth-child(6) a{
+    background: var(--orange);
+    color: var(--white);
+    padding: 4px 10px;
+    transition: var(--ease-out);
+}
+
+header nav li:nth-child(6) a:hover{
+    background: var(--red);
+    transition: var(--ease-out);
+}
+
+#active{
+    color: var(--red);
+}
+
+header img{
+    width: 180px;
+}
+
+/* Footer */
+
+footer{
+    background: var(--green-water);
+}
+
+footer div{
+    max-width: var(--max-width);
+    margin: auto;
+    text-align: center;
+    padding: 10px 0;
+    color: var(--white);
+}
