@@ -25,6 +25,10 @@ a{
     text-decoration: none;
 }
 
+h2{
+    font-size: 36px;
+}
+
 @keyframes fadeInUp {
   0% {
     transform: translateY(100%);
@@ -100,7 +104,7 @@ header img{
     max-width: var(--max-width);
     margin: auto;
     display: flex;
-    padding: 100px 0;
+    padding: 100px 20px;
     justify-content: space-between;
 }
 
@@ -110,7 +114,6 @@ header img{
 }
 
 .section1 > div h2{
-    font-size: 36px;
     margin-bottom: 20px;
 }
 
@@ -137,7 +140,6 @@ header img{
 }
 
 .section2 div h2{
-    font-size: 36px;
     padding-bottom: 50px;
     text-align: center;
 }
@@ -183,6 +185,57 @@ header img{
 
 #dwwm article{
     left: 10%;
+}
+
+/* Section3 */
+
+.section3{
+    background: var(--background);
+}
+
+.section3 > div{
+    max-width: var(--max-width);
+    margin: auto;
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.section3 div h2{
+    margin-bottom: 40px;
+}
+
+.section3 > div div{
+    display: flex;
+    gap: 20px;
+}
+
+.section3 > div article{
+    width: 48%;
+    margin: 0 auto;
+}
+
+details{
+    background: var(--white);
+    padding: 2px;
+    margin-bottom: 22px;
+}
+
+details li{
+    color: var(--background);
+    text-align: left;
+}
+
+details > ul{
+    padding: 0;
+    line-height: 2rem;
+}
+
+summary{
+    color: var(--orange);
+    padding: 10px;
+    display: block;
+    border-bottom: solid 2px var(--orange);
+    width: max-content;
 }
 
 /* Footer */
