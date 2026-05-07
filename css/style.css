@@ -2,13 +2,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
 /* Général */
-*{
+* {
     margin: 0;
     font-family: var(--font-text);
     color: var(--white);
 }
 
-:root{
+:root {
     --font-text: "Open Sans", sans-serif;
     --font-title: "Raleway", sans-serif;
     --background: #011826;
@@ -20,33 +20,43 @@
     --ease-out: 0.3s ease-out;
 }
 
-a{
+a {
     color: var(--white);
     text-decoration: none;
 }
 
-h2{
+h2 {
     font-size: 36px;
 }
 
 @keyframes fadeInUp {
-  0% {
-    transform: translateY(100%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0%);
-    opacity: 1;
-  }
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 /* Header */
 
-header{
+header {
     background: var(--background);
 }
 
-header div{
+header div {
     max-width: var(--max-width);
     margin: auto;
     display: flex;
@@ -55,52 +65,147 @@ header div{
     padding: 20px 10px;
 }
 
-header nav ul{
+header nav ul {
     display: flex;
     list-style: none;
     gap: 40px;
     padding: 0;
+}
+
+header nav li:nth-child(1) {
+    animation: 0s fadeInUp;
+}
+
+header nav li:nth-child(2) {
+    animation: 0.5s fadeInUp;
+}
+
+header nav li:nth-child(3) {
+    animation: 1s fadeInUp;
+}
+
+header nav li:nth-child(4) {
     animation: 1.5s fadeInUp;
 }
 
-header nav a{
+header nav li:nth-child(5) {
+    animation-delay: 0.8s;
+    animation: 2s fadeInUp;
+}
+
+header nav li:nth-child(6) {
+    animation: 2.5s fadeInUp;
+    position: relative;
+}
+
+header nav a {
     color: var(--orange);
     transition: var(--ease-out);
 }
 
-header nav a:hover{
+header nav a:hover {
     color: var(--red);
     transition: var(--ease-out);
 }
 
-.btn{
+.btn {
     background: var(--orange);
     color: var(--white);
     padding: 4px 10px;
     transition: var(--ease-out);
 }
 
-.btn:hover{
+.btn:hover {
     background: var(--red);
     color: var(--white);
     transition: var(--ease-out);
 }
 
-#active{
+#active {
     color: var(--red);
 }
 
-header img{
+header img {
     width: 180px;
+}
+
+#burger {
+    display: none;
+}
+
+.modal {
+    /* display: none!important; */
+
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    /* right: 0; */
+    bottom: 0;
+    left: -180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(77, 77, 77, .7);
+    transition: all .4s;
+    width: 220%;
+}
+
+.modal:target {
+    visibility: visible;
+    opacity: 1;
+    /* width: 20%; */
+    /* display: block!important; */
+
+}
+
+.modal-content {
+    border-radius: 4px;
+    position: relative;
+    width: 500px;
+    max-width: 90%;
+    background: var(--white);
+    padding: 1.5em 2em;
+    display: block;
+    color: var(--background);
+}
+
+.modal-content h1, 
+.modal-content input,
+.modal-content label,
+.modal-content textarea{
+    color: var(--background);
+    display: flex;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.modal-content form input::placeholder,
+.modal-content form textarea::placeholder{
+    text-align: left;
+}
+
+.modal-content .btn{
+    background: var(--background);
+    width: 100%;
+}
+
+.modal_close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: var(--red);
+    text-decoration: none;
 }
 
 /* Section 1 */
 
-.section1{
+.section1 {
     background: var(--background);
 }
 
-.section1 > div{
+.section1>div {
     max-width: var(--max-width);
     margin: auto;
     display: flex;
@@ -108,48 +213,55 @@ header img{
     justify-content: space-between;
 }
 
-.section1 > div img{
-    width: 664px;
-    animation: 3.5s fadeInUp;
+.section1 .modal {
+    position: absolute;
+    top: 60%;
+    left: 4%;
+    width: 14%;
 }
 
-.section1 > div h2{
+.section1>div img {
+    width: 664px;
+    animation: 4s fadeIn;
+}
+
+.section1>div h2 {
     margin-bottom: 20px;
 }
 
-.section1 > div p{
+.section1>div p {
     font-size: 18px;
     margin-bottom: 10px;
     line-height: 30px;
 }
 
-.section1 > div div{
+.section1>div>div {
     width: 40%;
-    animation: 2.5s fadeInUp;
+    animation: 3s fadeIn;
 }
 
 /* Section2 */
 
-.section2{
+.section2 {
     background: var(--background);
 }
 
-.section2 div{
+.section2 div {
     max-width: var(--max-width);
     margin: auto;
 }
 
-.section2 div h2{
+.section2 div h2 {
     padding-bottom: 50px;
     text-align: center;
 }
 
-.section2 img{
+.section2 img {
     width: 798px;
     margin-left: 10%;
 }
 
-.section2 div article{
+.section2 div article {
     width: 22%;
     background: var(--orange);
     position: absolute;
@@ -158,20 +270,20 @@ header img{
     padding: 30px;
 }
 
-.section2 > div div{
+.section2>div div {
     position: relative;
     padding-bottom: 100px;
 }
 
-.section2 > div article h3{
+.section2>div article h3 {
     margin: 20px 0;
 }
 
-.section2 > div article p:nth-child(2){
+.section2>div article p:nth-child(2) {
     margin-bottom: 20px;
 }
 
-.section2 article a{
+.section2 article a {
     background: var(--background);
     border: 1px solid var(--white);
     position: absolute;
@@ -179,56 +291,56 @@ header img{
     top: 96%;
 }
 
-.section2 #dwwm img{
-    margin-left: 30%;
+.section2 #dwwm img {
+    margin-left: 20%;
 }
 
-#dwwm article{
+#dwwm article {
     left: 10%;
 }
 
 /* Section3 */
 
-.section3{
+.section3 {
     background: var(--background);
 }
 
-.section3 > div{
+.section3>div {
     max-width: var(--max-width);
     margin: auto;
     text-align: center;
 }
 
-.section3 div h2{
+.section3 div h2 {
     margin-bottom: 40px;
 }
 
-.section3 > div div{
+.section3>div div {
     display: grid;
     gap: 20px;
     grid-template-columns: 1fr 1fr;
 }
 
-.section3 > div > div > div{
+.section3>div>div>div {
     display: flex;
     flex-direction: column;
 }
 
-details{
+details {
     background: var(--white);
     padding: 2px;
 }
 
-details li{
+details li {
     color: var(--background);
     text-align: left;
 }
 
-details ul{
+details ul {
     line-height: 2rem;
 }
 
-summary{
+summary {
     color: var(--orange);
     padding: 10px;
     display: block;
@@ -238,57 +350,58 @@ summary{
 
 /* Section4 */
 
-.section4{
+.section4 {
     background: var(--background);
 }
 
-.section4 > div{
+.section4>div {
     max-width: var(--max-width);
     margin: auto;
     padding-bottom: 50px;
 
 }
 
-.section4 > div > div{
+.section4>div>div {
     display: flex;
     justify-content: space-between;
     padding: 0 10px;
     align-items: center;
 }
 
-.section4 > div > div h2{
+.section4>div>div h2 {
     padding: 100px 0;
 }
 
-.section4 > div > div a{
+.section4>div>div a {
     background: var(--background);
     border: 1px solid var(--white);
 }
 
-.section4 > div div:nth-child(2){
+.section4>div div:nth-child(2) {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 40px;
 }
 
-.section4 img{
+.section4 img {
     position: relative;
     width: 100%;
     height: 180px;
     object-fit: cover;
 }
 
-.section4 article div{
+.section4 article div {
     border: 1px solid white;
     padding: 20px;
     margin-bottom: 20px;
 }
 
-.section4 article h3{
+.section4 article h3 {
     padding: 20px 0;
 }
 
-.front, .back{
+.front,
+.back {
     position: absolute;
     background: var(--background);
     z-index: 1;
@@ -299,14 +412,124 @@ summary{
 
 /* Footer */
 
-footer{
+footer {
     background: var(--green-water);
 }
 
-footer div{
+footer div {
     max-width: var(--max-width);
     margin: auto;
     text-align: center;
     padding: 10px 0;
     color: var(--white);
+}
+
+@media screen and (max-width:1024px) {
+    header nav {
+        display: none;
+    }
+
+    #burger {
+        display: block;
+    }
+
+    .section1>div div {
+        width: 100%;
+    }
+
+    .section1>div {
+        display: block;
+    }
+
+    .section1>div img {
+        padding: 50px 20px;
+    }
+
+    .section2 #dwwm img {
+        margin-left: 28%;
+    }
+
+    .section2 img {
+        width: 70%;
+        margin-left: 2%;
+    }
+
+    .section2 div article {
+        width: 28%;
+        top: -4%;
+        left: 60%;
+    }
+
+    .section2 article a {
+        left: 28%;
+    }
+
+    .section4>div div:nth-child(2) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .section4 article:nth-last-child(1) {
+        grid-column: 1 / 3;
+        grid-row: 2;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .section1>div img {
+        padding: 50px 0px;
+    }
+
+    .section1>div img {
+        width: 100%;
+    }
+
+    .section2 div article {
+        width: 68%;
+        top: 66%;
+        left: 0;
+        margin: auto 13px;
+    }
+
+    .section2 img {
+        width: 95%;
+    }
+
+    .section2 div article {
+        position: relative;
+    }
+
+    #dwwm {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    #dwwm article {
+        left: 2%;
+    }
+
+    .section2 #dwwm img {
+        margin-left: 3%;
+    }
+
+    .section3>div div {
+        grid-template-columns: none;
+    }
+
+    .section4 article {
+        margin-bottom: 40px;
+    }
+
+    .section4>div div:nth-child(2) {
+        display: block;
+    }
+
+    .section4>div>div {
+        display: block;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+
+    .section4>div>div h2 {
+        padding: 60px 0;
+    }
 }

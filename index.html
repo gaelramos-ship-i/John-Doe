@@ -28,13 +28,25 @@
                         <dialog id="contact" class="modal">
                             <div class="modal-content">
                                 <h1>Me contacter</h1>
-                                <p>Bienvenue sur la fenêtre modale !</p>
+                                <form action="#">
+                                    <label for="name">Votre nom:</label>
+                                    <input id="name" type="text" placeholder="Votre nom" required>
+
+                                    <label for="email">Votre email:</label>
+                                    <input id="email" type="email" placeholder="Votre email" required>
+
+                                    <label for="message">Votre Message:</label>
+                                    <textarea name="message" id="message" placeholder="Votre message"></textarea>
+
+                                    <button class="btn" type="submit">Envoyer la demande</button>
+                                </form>
                                 <a href="#" class="modal_close">&times;</a>
                             </div>
                         </dialog>
                     </li>
                 </ul>
             </nav>
+            <i id="burger" class="fa-solid fa-bars"></i>
         </div>
     </header>
 
@@ -55,7 +67,25 @@
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias temporibus corrupti blanditiis
                         aliquid, quod a expedita eligendi soluta libero voluptate sit, maiores consequatur minus
                         perspiciatis perferendis porro? Consectetur, laborum quo!</p>
-                    <a class="btn" href="#">Contactez-moi</a>
+                    <a class="btn" href="#contact2">Contactez-moi</a>
+                    <dialog id="contact2" class="modal">
+                        <div class="modal-content">
+                            <h1>Me contacter</h1>
+                            <form action="#">
+                                <label for="name">Votre nom:</label>
+                                <input id="name" type="text" placeholder="Votre nom" required>
+
+                                <label for="email">Votre email:</label>
+                                <input id="email" type="email" placeholder="Votre email" required>
+
+                                <label for="message">Votre Message:</label>
+                                <textarea name="message" id="message" placeholder="Votre message"></textarea>
+
+                                <button class="btn" type="submit">Envoyer la demande</button>
+                            </form>
+                            <a href="#" class="modal_close">&times;</a>
+                        </div>
+                    </dialog>
                 </div>
                 <img src="img/moi.png" alt="image - John Doe">
             </div>
@@ -208,7 +238,7 @@
                         <div>
                             <p class="front">Front-end</p>
                             <img src="img/projet2.PNG" alt="image-projet2">
-                            <h3>Home Key - Intégration HTML & CSS</h3>
+                            <h3>Vividly - Intégration Mobile First</h3>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse ratione, laboriosam ad
                                 dicta impedit dolore dignissimos, animi eos veniam doloremque, natus rem? Odio
                                 blanditiis deleniti est, officia facere sapiente alias!</p>
@@ -219,7 +249,7 @@
                         <div>
                             <p class="back">Back-end</p>
                             <img src="img/projet3.PNG" alt="image-projet3">
-                            <h3>Home Key - Intégration HTML & CSS</h3>
+                            <h3>Portfolio de Développeur Web</h3>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse ratione, laboriosam ad
                                 dicta impedit dolore dignissimos, animi eos veniam doloremque, natus rem? Odio
                                 blanditiis deleniti est, officia facere sapiente alias!</p>
